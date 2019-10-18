@@ -2,13 +2,14 @@
  *= require_self
  */
 
-$bar-bg-color: #287fba !default;
+$bar-bg-color: #229494 !default;
 $bar-link-color: #ffffff !default;
-$bar-link-selected-color: #5298c7 !default;
-$bar-link-active-color: #3d8bc0 !default;
-$bar-link-hover-color: #2472a7 !default;
+$bar-link-selected-color: #4ea9a9 !default;
+$bar-link-active-color: #e8f4f4 !default;
+$bar-link-hover-color: #64b4b4 !default;
 
-$menu-link-color: #1a2544 !default;
+$menu-bg-color: #f2f4f8 !default;
+$menu-link-color: #0b0b0c !default;
 $menu-group-title-color: #172b4d !default;
 $menu-link-selected-color: #17213d !default;
 
@@ -242,7 +243,7 @@ $menu-link-selected-color: #17213d !default;
           position: absolute;
           top: 0px;
           width: 100%;
-          background-color: rgb(244, 245, 247);
+          background-color: $menu-bg-color;
           animation-duration: 0.22s;
           animation-fill-mode: forwards;
           animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
@@ -450,10 +451,14 @@ $menu-link-selected-color: #17213d !default;
           visibility: visible;
         }
       }
-    }
 
-    .content-container {
-      padding-left: 16px;
+      & + .content-container {
+        padding-left: 16px;
+      }
+
+      &.no-navigation-menu + .content-container {
+        padding-left: 0px;
+      }
     }
   }
 }

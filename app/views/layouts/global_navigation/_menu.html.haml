@@ -1,4 +1,4 @@
-.navigation-container
+.navigation-container{class: ('no-navigation-menu' unless show_navigation_menu?)}
   .container-navigation-mask
     .global-navigation
       = render_navigation context: :global, level: 1

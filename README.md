@@ -212,7 +212,19 @@ Coloque o conteúdo das suas páginas dentro do escopo do layout do Global Navig
 
 ```erb
   <body>
-    <%= render layout: 'layouts/global_navigation/layout' do -%>
+    <%= global_navigation_container do -%>
+      <main>
+        <%= yield %>
+      </main>
+    <% end %>
+  </body>
+```
+
+Ou caso precise informar classes no container do leiaute da barra:
+
+```erb
+  <body>
+    <%= global_navigation_container(class: 'uma-classe-css outra-classe-css') do -%>
       <main>
         <%= yield %>
       </main>

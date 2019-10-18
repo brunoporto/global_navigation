@@ -3,10 +3,11 @@ SimpleNavigation::Configuration.run do |navigation|
 
   navigation.items do |navigation_bar|
     # Registro fixo, deve manter sempre esse nome, altere apenas a url e o :src para indicar uma imagem
-    navigation_bar.item :logo, nil, root_path, src: asset_path("global_navigation/taxweb_icon_logo.png")
+    navigation_bar.item :logo, nil, root_path, src: asset_path("global_navigation/placeholder_35x35.png")
 
     # Registro fixo, deve manter sempre esse nome, altere apenas a url e o :src para indicar uma imagem
-    navigation_bar.item :profile, nil, root_path, src: current_user&.avatar
+    # ex: current_user&.avatar
+    navigation_bar.item :profile, nil, root_path, src: asset_path("global_navigation/placeholder_35x35.png") 
 
     ## Icones
     ## icon_class = informe a classe para utilizar como ícone "icon icon-dashboard"

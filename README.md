@@ -41,6 +41,14 @@ Adicione os assets:
 */
 ```
 
+**IMAGE**
+
+Caso a versão do sprockets no seu projeto seja inferior a 4, adicione ao seu asset pipeline:
+
+```ruby
+Rails.application.config.assets.precompile << 'global_navigation/placeholder_35x35.png'
+```
+
 ## ITEMS DO MENU
 
 Edite o arquivo gerado pela instalação em `config/global_navigation.rb`
@@ -235,4 +243,5 @@ Para adicionar um rodapé no menu lateral atual, utilize o helper `content_for`.
 ```
 
 ![Rodapé do Menu Lateral](docs/rodape_menu_lateral.png)
+
 # global_navigation

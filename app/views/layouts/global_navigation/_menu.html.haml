@@ -6,9 +6,11 @@
       .content-navigation-wrapper
         .container-navigation-menu-base
           .scroll-provider{:role => "group", :tabindex => "-1"}
-            .container-navigation-menu-top= yield :global_navigation_menu_top
+            - if content_for?(:global_navigation_menu_top)
+              .container-navigation-menu-top= yield :global_navigation_menu_top
             .container-navigation-menu= render_navigation context: :global, level: 2
-            .container-navigation-menu-bottom= yield :global_navigation_menu_bottom              
+            - if content_for?(:global_navigation_menu_bottom)
+              .container-navigation-menu-bottom= yield :global_navigation_menu_bottom              
   - if show_navigation_menu?
     .outer
       .shadow

@@ -2,16 +2,20 @@
  *= require_self
  */
 
-$bar-bg-color: #229494 !default;
-$bar-link-color: #ffffff !default;
-$bar-link-selected-color: #4ea9a9 !default;
-$bar-link-active-color: #e8f4f4 !default;
-$bar-link-hover-color: #64b4b4 !default;
+$bar-bgColor: #2d5179 !default;
+$bar-link-color: #deebff !default;
+$bar-link-selected-color: $bar-link-color !default;
+$bar-link-selected-bgColor: #466a93 !default;
+$bar-link-active-color: $bar-link-color !default;
+$bar-link-active-bgColor: #2c5078 !default;
+$bar-link-hover-color: $bar-link-color !default;
+$bar-link-hover-bgColor: #426286 !default;
 
-$menu-bg-color: #f2f4f8 !default;
-$menu-link-color: #0b0b0c !default;
-$menu-group-title-color: #172b4d !default;
-$menu-link-selected-color: #17213d !default;
+$menu-bgColor: #f4f5f7 !default;
+$menu-link-color: #42526e !default;
+$menu-group-title-color: $menu-link-color !default;
+$menu-link-selected-color: $menu-link-color !default;
+$menu-link-selected-bgColor: #ebecf0 !default;
 
 .layout-container {
   display: flex;
@@ -45,7 +49,7 @@ $menu-link-selected-color: #17213d !default;
 
       .global-navigation {
         .items-list-container {
-          background-color: $bar-bg-color;
+          background-color: $bar-bgColor;
           -webkit-box-align: center;
           align-items: center;
           box-sizing: border-box;
@@ -121,13 +125,16 @@ $menu-link-selected-color: #17213d !default;
                   margin-bottom: 0px;
                 }
                 &.selected {
-                  background-color: $bar-link-selected-color;
+                  color: $bar-link-selected-color;
+                  background-color: $bar-link-selected-bgColor;
                 }
                 &:active {
                   color: $bar-link-active-color;
+                  background-color: $bar-link-active-bgColor;
                 }
                 &:hover {
-                  background-color: $bar-link-hover-color;
+                  color: $bar-link-hover-color;
+                  background-color: $bar-link-hover-bgColor;
                 }
               }
 
@@ -243,7 +250,7 @@ $menu-link-selected-color: #17213d !default;
           position: absolute;
           top: 0px;
           width: 100%;
-          background-color: $menu-bg-color;
+          background-color: $menu-bgColor;
           animation-duration: 0.22s;
           animation-fill-mode: forwards;
           animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
@@ -329,7 +336,7 @@ $menu-link-selected-color: #17213d !default;
               }
 
               &.selected {
-                background-color: rgb(235, 236, 240);
+                background-color: $menu-link-selected-bgColor;
                 .navigation-menu-item-icon,
                 .navigation-menu-item-label {
                   color: $menu-link-selected-color;

@@ -1,12 +1,16 @@
-$bar-bg-color: #229494;
-$bar-link-color: #ffffff;
-$bar-link-selected-color: #4ea9a9;
-$bar-link-active-color: #e8f4f4;
-$bar-link-hover-color: #64b4b4;
+$bar-bgColor: #2d5179;
+$bar-link-color: #deebff;
+$bar-link-selected-color: $bar-link-color;
+$bar-link-selected-bgColor: #466a93;
+$bar-link-active-color: $bar-link-color;
+$bar-link-active-bgColor: #2c5078;
+$bar-link-hover-color: $bar-link-color;
+$bar-link-hover-bgColor: #426286;
 
-$menu-bg-color: #f2f4f8;
-$menu-link-color: #1a2544;
-$menu-group-title-color: #172b4d;
-$menu-link-selected-color: #17213d;
+$menu-bgColor: #f4f5f7;
+$menu-link-color: #42526e;
+$menu-group-title-color: $menu-link-color;
+$menu-link-selected-color: $menu-link-color;
+$menu-link-selected-bgColor: #ebecf0;
 
 @import "global_navigation/global_navigation";

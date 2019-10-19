@@ -1,16 +1,16 @@
-.navigation-container{class: ('no-navigation-menu' unless show_navigation_menu?)}
-  .container-navigation-mask
+.global-navigation-container{class: ('no-navigation-menu' unless show_navigation_menu?)}
+  .global-navigation-container-mask
     .global-navigation
       = render_navigation context: :global, level: 1
     - if show_navigation_menu?
-      .content-navigation-wrapper
-        .container-navigation-menu-base
+      .navigation-content-wrapper
+        .navigation-container-menu-base
           .scroll-provider{:role => "group", :tabindex => "-1"}
             - if content_for?(:global_navigation_menu_top)
-              .container-navigation-menu-top= yield :global_navigation_menu_top
-            .container-navigation-menu= render_navigation context: :global, level: 2
+              .navigation-container-menu-top= yield :global_navigation_menu_top
+            .navigation-container-menu= render_navigation context: :global, level: 2
             - if content_for?(:global_navigation_menu_bottom)
-              .container-navigation-menu-bottom= yield :global_navigation_menu_bottom              
+              .navigation-container-menu-bottom= yield :global_navigation_menu_bottom              
   - if show_navigation_menu?
     .outer
       .shadow

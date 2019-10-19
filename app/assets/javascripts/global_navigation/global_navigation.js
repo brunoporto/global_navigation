@@ -56,7 +56,7 @@
       var element = this.container;
       var arr = element.className.split(" ");
       var navigationElement = element.querySelector(
-        ".content-navigation-wrapper"
+        ".navigation-content-wrapper"
       );
       navigationElement.style.width = "20px";
       window.setTimeout(function() {

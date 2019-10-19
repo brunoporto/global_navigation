@@ -17,13 +17,13 @@ $menu-group-title-color: $menu-link-color !default;
 $menu-link-selected-color: $menu-link-color !default;
 $menu-link-selected-bgColor: #ebecf0 !default;
 
-.layout-container {
+.global-navigation-layout {
   display: flex;
   flex-direction: row;
   height: calc(100vh - 0px);
   margin-top: 0px;
 
-  .content-container {
+  .global-navigation-content {
     will-change: padding-left;
     padding-left: 240px; /* 20px */
     transition: padding-left 300ms cubic-bezier(0.2, 0, 0, 1) 0s;
@@ -34,14 +34,14 @@ $menu-link-selected-bgColor: #ebecf0 !default;
     flex: 1 1 auto;
   }
 
-  .navigation-container {
+  .global-navigation-container {
     bottom: 0px;
     left: 0px;
     position: fixed;
     top: 0px;
     z-index: 200;
 
-    .container-navigation-mask {
+    .global-navigation-container-mask {
       display: flex;
       flex-direction: row;
       height: 100%;
@@ -234,14 +234,14 @@ $menu-link-selected-bgColor: #ebecf0 !default;
         }
       }
 
-      .content-navigation-wrapper {
+      .navigation-content-wrapper {
         will-change: width;
         width: 240px;
         transition: width 300ms cubic-bezier(0.2, 0, 0, 1) 0s;
         height: 100%;
         position: relative;
 
-        .container-navigation-menu-base {
+        .navigation-container-menu-base {
           box-sizing: border-box;
           height: 100%;
           left: 0px;
@@ -258,19 +258,19 @@ $menu-link-selected-bgColor: #ebecf0 !default;
           transition-duration: 0.22s;
           transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
 
-          .container-navigation-menu-top {
+          .navigation-container-menu-top {
             box-sizing: border-box;
             padding-left: 16px;
             padding-right: 16px;
             padding-top: 20px;
           }
 
-          .container-navigation-menu-bottom {
+          .navigation-container-menu-bottom {
             padding-top: 8px;
             margin: auto 16px 20px;
           }
 
-          .container-navigation-menu {
+          .navigation-container-menu {
             box-sizing: border-box;
             padding-left: 16px;
             padding-right: 16px;
@@ -427,9 +427,9 @@ $menu-link-selected-bgColor: #ebecf0 !default;
 
   &.closed {
     .navigation-container {
-      .content-navigation-wrapper {
+      .navigation-content-wrapper {
         width: 16px;
-        .container-navigation-menu-base {
+        .navigation-container-menu-base {
           min-width: 16px;
         }
       }
@@ -443,9 +443,9 @@ $menu-link-selected-bgColor: #ebecf0 !default;
       }
 
       &:hover {
-        .content-navigation-wrapper {
+        .navigation-content-wrapper {
           width: 240px;
-          .container-navigation-primitive-base {
+          .navigation-container-primitive-base {
             min-width: 240px;
           }
         }
@@ -459,11 +459,11 @@ $menu-link-selected-bgColor: #ebecf0 !default;
         }
       }
 
-      & + .content-container {
+      & + .global-navigation-content {
         padding-left: 16px;
       }
 
-      &.no-navigation-menu + .content-container {
+      &.no-navigation-menu + .global-navigation-content {
         padding-left: 0px;
       }
     }
